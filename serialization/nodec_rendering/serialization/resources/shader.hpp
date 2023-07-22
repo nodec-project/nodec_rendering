@@ -1,11 +1,10 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__SHADER_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__SHADER_HPP_
-
-#include <nodec_serialization/nodec/vector4.hpp>
+#ifndef NODEC_RENDERING__SERIALIZATION__RESOURCES__SHADER_HPP_
+#define NODEC_RENDERING__SERIALIZATION__RESOURCES__SHADER_HPP_
 
 #include <cereal/cereal.hpp>
 #include <cereal/types/vector.hpp>
 
+#include <nodec/serialization/vector4.hpp>
 #include <nodec/vector4.hpp>
 
 #include <string>
@@ -13,7 +12,6 @@
 
 namespace nodec_rendering {
 namespace resources {
-
 
 template<class Archive>
 void serialize(Archive &archive, ShaderMetaInfo::FloatProperty &property) {
@@ -44,7 +42,6 @@ void serialize(Archive &archive, ShaderMetaInfo &info) {
         cereal::make_nvp("pass", info.pass),
         cereal::make_nvp("rendering_priority", info.rendering_priority));
 }
-
 
 template<class Archive>
 void serialize(Archive &archive, SubShaderMetaInfo &info) {

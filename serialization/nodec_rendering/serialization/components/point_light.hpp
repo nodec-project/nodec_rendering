@@ -1,9 +1,9 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__POINT_LIGHT_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__POINT_LIGHT_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__COMPONENTS__POINT_LIGHT_HPP_
+#define NODEC_RENDERING__SERIALIZATION__COMPONENTS__POINT_LIGHT_HPP_
 
 #include <nodec_rendering/components/point_light.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>
-#include <nodec_serialization/nodec/vector4.hpp>
+#include <nodec/serialization/vector4.hpp>
 
 namespace nodec_rendering {
 namespace components {

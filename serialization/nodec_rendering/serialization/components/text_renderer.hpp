@@ -1,11 +1,11 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__TEXT_RENDERER_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__TEXT_RENDERER_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__COMPONENTS__TEXT_RENDERER_HPP_
+#define NODEC_RENDERING__SERIALIZATION__COMPONENTS__TEXT_RENDERER_HPP_
 
+#include <nodec/serialization/vector4.hpp>
 #include <nodec_rendering/components/text_renderer.hpp>
 #include <nodec_rendering/resources/font.hpp>
 #include <nodec_rendering/resources/material.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>
-#include <nodec_serialization/nodec/vector4.hpp>
 
 namespace nodec_rendering {
 namespace components {

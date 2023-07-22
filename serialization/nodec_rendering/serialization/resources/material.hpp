@@ -1,5 +1,5 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__MATERIAL_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__MATERIAL_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__RESOURCES__MATERIAL_HPP_
+#define NODEC_RENDERING__SERIALIZATION__RESOURCES__MATERIAL_HPP_
 
 #include "../sampler.hpp"
 
@@ -7,9 +7,9 @@
 #include <cereal/types/unordered_map.hpp>
 #include <nodec/resource_management/resource_registry.hpp>
 
-#include <nodec_serialization/nodec/vector2.hpp>
-#include <nodec_serialization/nodec/vector3.hpp>
-#include <nodec_serialization/nodec/vector4.hpp>
+#include <nodec/serialization/vector2.hpp>
+#include <nodec/serialization/vector3.hpp>
+#include <nodec/serialization/vector4.hpp>
 
 #include <nodec_rendering/resources/material.hpp>
 

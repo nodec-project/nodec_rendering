@@ -1,11 +1,11 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__MESH_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__RESOURCES__MESH_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__RESOURCES__MESH_HPP_
+#define NODEC_RENDERING__SERIALIZATION__RESOURCES__MESH_HPP_
 
 #include <cereal/cereal.hpp>
 #include <cereal/types/vector.hpp>
 
-#include <nodec_serialization/nodec/vector2.hpp>
-#include <nodec_serialization/nodec/vector3.hpp>
+#include <nodec/serialization/vector2.hpp>
+#include <nodec/serialization/vector3.hpp>
 
 #include <nodec_rendering/resources/mesh.hpp>
 

@@ -1,5 +1,5 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__NON_VISIBLE_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__NON_VISIBLE_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__COMPONENTS__NON_VISIBLE_HPP_
+#define NODEC_RENDERING__SERIALIZATION__COMPONENTS__NON_VISIBLE_HPP_
 
 #include <nodec_rendering/components/non_visible.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>

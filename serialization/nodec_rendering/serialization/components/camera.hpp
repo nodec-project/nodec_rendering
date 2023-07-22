@@ -1,5 +1,5 @@
-#ifndef NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__CAMERA_HPP_
-#define NODEC_SERIALIZATION__NODEC_RENDERING__COMPONENTS__CAMERA_HPP_
+#ifndef NODEC_RENDERING__SERIALIZATION__COMPONENTS__CAMERA_HPP_
+#define NODEC_RENDERING__SERIALIZATION__COMPONENTS__CAMERA_HPP_
 
 #include <nodec_rendering/components/camera.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>
