@@ -4,6 +4,7 @@
 #include <cereal/types/vector.hpp>
 
 #include <nodec_rendering/components/mesh_renderer.hpp>
+#include <nodec_scene_serialization/archive_context.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>
 
 namespace nodec_rendering {
