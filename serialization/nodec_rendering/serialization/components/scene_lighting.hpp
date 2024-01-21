@@ -3,6 +3,7 @@
 
 #include <nodec_rendering/components/scene_lighting.hpp>
 #include <nodec_rendering/resources/material.hpp>
+#include <nodec_scene_serialization/archive_context.hpp>
 #include <nodec_scene_serialization/serializable_component.hpp>
 
 namespace nodec_rendering {
