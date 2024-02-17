@@ -1,6 +1,7 @@
 #ifndef NODEC_RENDERING__SERIALIZATION__COMPONENTS__IMAGE_RENDERER_HPP_
 #define NODEC_RENDERING__SERIALIZATION__COMPONENTS__IMAGE_RENDERER_HPP_
 
+#include <nodec/serialization/vector4.hpp>
 #include <nodec_rendering/components/image_renderer.hpp>
 #include <nodec_rendering/resources/material.hpp>
 #include <nodec_rendering/resources/texture.hpp>
@@ -64,6 +65,12 @@ public:
         archive(cereal::make_nvp("pixels_per_unit", pixels_per_unit));
     }
 };
+
+template<class Archive>
+void serialize(Archive &archive, ImageRenderer &image_renderer) {
+    archive(cereal::make_nvp("pixels_per_unit", image_renderer.pixels_per_unit));
+    archive(cereal::make_nvp("color", image_renderer.color));
+}
 
 } // namespace components
 } // namespace nodec_rendering
