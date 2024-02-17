@@ -1,14 +1,13 @@
 #ifndef NODEC_RENDERING__COMPONENTS__TEXT_RENDERER_HPP_
 #define NODEC_RENDERING__COMPONENTS__TEXT_RENDERER_HPP_
 
-#include "../resources/font.hpp"
-#include "../resources/material.hpp"
+#include <memory>
+#include <string>
 
 #include <nodec/vector4.hpp>
 
-#include <string>
-#include <memory>
-
+#include "../resources/font.hpp"
+#include "../resources/material.hpp"
 
 namespace nodec_rendering {
 namespace components {
@@ -24,7 +23,7 @@ struct TextRenderer {
 
     nodec::Vector4f color{1.0f, 1.0f, 1.0f, 1.0f};
 };
-}
+} // namespace components
 } // namespace nodec_rendering
 
 #endif
