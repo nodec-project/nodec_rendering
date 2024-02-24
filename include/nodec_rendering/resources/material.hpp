@@ -1,16 +1,16 @@
 #ifndef NODEC_RENDERING__RESOURCES__MATERIAL_HPP_
 #define NODEC_RENDERING__RESOURCES__MATERIAL_HPP_
 
-#include "../cull_mode.hpp"
-#include "../sampler.hpp"
-#include "shader.hpp"
-#include "texture.hpp"
+#include <map>
+#include <memory>
 
 #include <nodec/optional.hpp>
 #include <nodec/vector4.hpp>
 
-#include <map>
-#include <memory>
+#include "../cull_mode.hpp"
+#include "../sampler.hpp"
+#include "shader.hpp"
+#include "texture.hpp"
 
 namespace nodec_rendering {
 namespace resources {
@@ -51,6 +51,14 @@ public:
         cull_mode_ = cull_mode;
     }
 
+    bool is_transparent() const {
+        return is_transparent_;
+    }
+
+    void set_transparent(bool is_transparent) {
+        is_transparent_ = is_transparent;
+    }
+
     virtual float get_float_property(const std::string &name) const = 0;
     virtual void set_float_property(const std::string &name, const float &value) = 0;
 
@@ -66,6 +74,7 @@ protected:
 private:
     CullMode cull_mode_{CullMode::Back};
     std::shared_ptr<Shader> shader_;
+    bool is_transparent_{false};
 };
 
 } // namespace resources

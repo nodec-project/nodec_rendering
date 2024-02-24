@@ -30,6 +30,8 @@ struct SerializableMaterial {
 
     CullMode cull_mode{CullMode::Back};
 
+    bool is_transparent{false};
+
     SerializableMaterial() = default;
 
     SerializableMaterial(const Material &source, nodec::resource_management::ResourceRegistry &registry) {
@@ -57,6 +59,8 @@ struct SerializableMaterial {
                 ser_entry.sampler = entry.sampler;
             }
         }
+
+        is_transparent = source.is_transparent();
     }
 
     void apply_to(Material &dest, nodec::resource_management::ResourceRegistry &registry) {
@@ -87,6 +91,7 @@ struct SerializableMaterial {
         }
 
         dest.set_cull_mode(cull_mode);
+        dest.set_transparent(is_transparent);
     }
 
     // apply_from?
@@ -106,7 +111,8 @@ void serialize(Archive &archive, SerializableMaterial &material) {
         cereal::make_nvp("cull_mode", material.cull_mode),
         cereal::make_nvp("float_properties", material.float_properties),
         cereal::make_nvp("vector4_properties", material.vector4_properties),
-        cereal::make_nvp("texture_properties", material.texture_properties));
+        cereal::make_nvp("texture_properties", material.texture_properties),
+        cereal::make_nvp("is_transparent", material.is_transparent));
 }
 
 } // namespace resources
