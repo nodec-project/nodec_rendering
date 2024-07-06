@@ -20,13 +20,15 @@ public:
         : BaseSerializableComponent(this),
           image(other.image),
           material(other.material),
-          pixels_per_unit(other.pixels_per_unit) {}
+          pixels_per_unit(other.pixels_per_unit),
+          color(other.color) {}
 
     operator ImageRenderer() const noexcept {
         ImageRenderer value;
         value.image = image;
         value.material = material;
         value.pixels_per_unit = pixels_per_unit;
+        value.color = color;
         return value;
     }
 
@@ -34,6 +36,8 @@ public:
     std::shared_ptr<resources::Material> material;
 
     int pixels_per_unit{100};
+
+    nodec::Vector4f color{1.0f, 1.0f, 1.0f, 1.0f};
 
     template<class Archive>
     void save(Archive &archive) const {
@@ -43,6 +47,7 @@ public:
         archive(cereal::make_nvp("image", context.resource_registry().lookup_name<resources::Texture>(image).first));
         archive(cereal::make_nvp("material", context.resource_registry().lookup_name<resources::Material>(material).first));
         archive(cereal::make_nvp("pixels_per_unit", pixels_per_unit));
+        archive(cereal::make_nvp("color", color));
     }
 
     template<class Archive>
@@ -63,6 +68,7 @@ public:
             material = context.resource_registry().get_resource_direct<resources::Material>(name);
         }
         archive(cereal::make_nvp("pixels_per_unit", pixels_per_unit));
+        archive(cereal::make_nvp("color", color));
     }
 };
 
