@@ -7,6 +7,7 @@
 #include <vector>
 
 namespace nodec_rendering {
+
 namespace resources {
 
 class Mesh {
