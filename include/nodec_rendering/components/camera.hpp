@@ -1,6 +1,7 @@
 #ifndef NODEC_RENDERING__COMPONENTS__CAMERA_HPP_
 #define NODEC_RENDERING__COMPONENTS__CAMERA_HPP_
 
+#include <nodec/flags.hpp>
 #include <nodec/matrix4x4.hpp>
 
 namespace nodec_rendering {
@@ -25,6 +26,16 @@ struct Camera {
 
     nodec::Matrix4x4f world2camera_matrix;
     nodec::Matrix4x4f projection_matrix;
+};
+
+enum class CameraDirtyFlag {
+    None = 0x00,
+    Projection = 0x01,
+    _nodec_flags_enable
+};
+
+struct CameraDirty {
+    nodec::Flags<CameraDirtyFlag> flags;
 };
 
 } // namespace components
