@@ -49,6 +49,15 @@ public:
     }
 };
 
+template<class Archive>
+void serialize(Archive &archive, Camera &camera) {
+    archive(cereal::make_nvp("far_clip_plane", camera.far_clip_plane));
+    archive(cereal::make_nvp("near_clip_plane", camera.near_clip_plane));
+    archive(cereal::make_nvp("projection", camera.projection));
+    archive(cereal::make_nvp("fov_angle", camera.fov_angle));
+    archive(cereal::make_nvp("ortho_width", camera.ortho_width));
+}
+
 } // namespace components
 } // namespace nodec_rendering
 
